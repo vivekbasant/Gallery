@@ -4,7 +4,7 @@ import Gallery from "../components/Gallery"
 import "react-photoswipe/lib/photoswipe.css";
 import styles from "../styles/Home.module.css";
 
-export default function Home(props) {
+export default function Home({item}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,18 +12,14 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={styles.title}>NextJS Image Gallery</h1>
-      <Gallery pic = {props.item} />
+      <Gallery pic = {item} />
       
     </div>
   );
 }
 
 
-export async function getServerSideProps() {
+Home.getInitialProps = async () => {
   const item = await getPostsData();
-  return {
-    props: {
-      item
-    }
-  }
+  return { item };
 }
