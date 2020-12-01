@@ -1,11 +1,7 @@
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
-INSTALLATION
-
-Create Nextjs App
-
-npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn-starter/tree/master/learn-starter"
-
-cd nextjs-blog
+Starts your Next.js app’s "development server"
 
 npm run dev
+
+Open http://localhost:3000 from your browser.
